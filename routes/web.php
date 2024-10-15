@@ -6,7 +6,9 @@ use App\Http\Controllers\backend\auth\LogoutController;
 use App\Http\Controllers\backend\auth\RegisterController;
 use App\Http\Controllers\backend\CategoryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OfferController;
 use Illuminate\Support\Facades\Route;
+use Mockery\Matcher\Not;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,4 +69,15 @@ Route::get("/create/category",[CategoryController::class,'createCategory'])->nam
 Route::get("/all/category",[CategoryController::class,'allCategory'])->name('all.category');
 
 Route::post("/store/category",[CategoryController::class,'storeCategory'])->name('store.category');
+
+
+
+
+
+
+Route::get('/create/Offer',[OfferController::class,'createOffer'])->name('create.Offer');
+Route::post('/store/Offer',[OfferController::class,'storeOffer'])->name('offers.store');
+
+Route::get('/view/Offer/{id}',[OfferController::class,'viewOffer'])->name('view.Offer');
+
 

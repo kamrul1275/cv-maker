@@ -4,7 +4,8 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-
+use App\Notifications\NewCVPosted;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -22,5 +23,6 @@ class AdminController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/');
-    }
+    }//end method
+
 }
